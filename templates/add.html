@@ -1,0 +1,25 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<body>
+    <section id="add_project">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6"></div>
+                <div class="col-lg-6">
+                    <h1>add project</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="add-form col-lg-3">
+                    {{ wtf.quick_form(form, novalidate=True) }}
+                </div>
+                <div class="col-lg-6"></div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+{% include "footer.html" %}

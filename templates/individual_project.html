@@ -1,0 +1,44 @@
+{% include "header.html" %}
+
+
+<body>
+    <section id="individual-projects-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-3 col-3"></div>
+                <div class="individual-project-number col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                    <h1>project {{ project.project_number }}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3"></div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                    <h4 class="individual-project-title">{{ project.project_name }}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-2 col-sm-3 col-3"></div>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                    <p class="individual-project-description">{{ project.project_description }}</p>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 offset-sm-3 offset-md-0 offset-3">
+                    <a href="https://github.com/BigEd12/Project_{{ project_num }}" target="_blank">
+                        <div class="img-wrap">
+                            <img class="individual-project-image" src="{{ url_for('static', filename=image) }}">
+                            <p class="link-to-github">code on GitHub</p>
+                        </div>
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+
+{% include "footer.html" %}

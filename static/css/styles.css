@@ -1,0 +1,519 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'League Spartan', sans-serif;
+  color: #444;
+}
+
+h1 {
+    text-align: left;
+    }
+
+h3 {
+    text-align: right;
+}
+
+
+/************************** HEADER - NAVBAR **************************/
+.toggler-text {
+    color: #fff;
+}
+
+
+.navbar {
+	padding: 0 0;
+	color: #fff;
+	background-color: black;
+}
+
+.nav-item {
+	padding: 1% 2%;
+}
+
+.nav-link {
+    color: #FFFFFF;
+	font-family: 'League Spartan', sans-serif;
+	font-size: 100%;
+	font-weight: 600;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: #B2B2B2;
+    }
+
+.navbar-custom {
+    background-color: #000000;
+}
+
+/************************** FOOTER **************************/
+#footer {
+    background-color: #000000;
+    padding-top: 2%;
+    color: #fff;
+}
+
+.footer-link:link {
+    color:white;
+}
+
+.links-text-l {
+    text-align: right;
+    color: #fff;
+    }
+
+.links-text-r {
+    padding-left: 1%;
+    text-align: left;
+    color: #fff;
+    }
+
+@media (max-width: 576px) {
+
+	.links-text-l {
+		text-align: center;
+		transition: 1s ease;
+    }
+
+	.links-text-r {
+		text-align: center;
+        transition: 1s ease;
+    }
+}
+
+/************************** LANDING **************************/
+#landing{
+    background-color: #000000;
+    color: #fff;
+    padding-top: 5%;
+}
+
+.boxes-img {
+    animation-name: boxes-animation;
+    animation-duration: 3s;
+    transition: 2s;
+    animation-timing-function: ease-in-out;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+
+	.boxes-img {
+	    width: 75%;
+	    padding-right: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+
+	.navbar {
+	    padding-right: 2%;
+	    transition: 1s;
+	    animation-timing-function: ease-in-out;
+    }
+}
+
+.boxes-img:hover {
+  opacity: 0.1;
+}
+
+@keyframes boxes-animation {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.landing-name{
+    text-align: left;
+    animation-name: name-animation;
+    animation-duration: 5s;
+    transition: 1s ease;
+}
+
+.landing-name:hover {
+  opacity: 0.1;
+}
+
+@keyframes name-animation {
+    0% {opacity: 0}
+    100% {opacity: 1}
+    }
+
+
+.landing-text {
+    animation-name: text-animation;
+    animation-duration: 5s;
+    padding-bottom: 5%;
+    text-align: right;
+    transition: 1s ease;
+    }
+
+.landing-text:hover {
+  opacity: 0.1;
+}
+
+@keyframes text-animation {
+    0% {opacity: 0}
+    100% {opacity: 1}
+    }
+
+/************************** ABOUT **************************/
+#about{
+    background-image: url("../img/3.png");
+    background-position: right center;
+    background-size: contain;
+    background-attachment: fixed;
+    color: #fff;
+    transition: 2s ease;
+    }
+
+@media (min-width: 992px) {
+
+	#about {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 576px) {
+
+	#about {
+        background-size: cover;
+    }
+}
+
+
+.about-title {
+    margin-top: 4%;
+    }
+
+.profile-image {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    width: 30%;
+    }
+
+.about-text-one {
+    text-align: right;
+    padding-bottom: 3%;
+    transition: 1s ease;
+    }
+
+@media (max-width: 576px) {
+
+	.about-text-one {
+		text-align: left;
+		padding-left: 25%;
+		font-size: 125%;
+    }
+
+	.about-text-two {
+		padding-left: 25%;
+		font-size: 125%;
+    }
+}
+
+.about-text-two {
+    text-align: left;
+    padding-bottom: 3%;
+    transition: 1s ease;
+    }
+
+/************************** PROJECTS **************************/
+#projects{
+    background-color: #000000;
+    color: #fff;
+    padding-bottom: 6%;
+    padding-top: 4%;
+    }
+
+.code-images{
+    width: 20%;
+    margin: 4% 0 12% 80%;
+    }
+
+.code-image-css {
+    margin-left: 88%;
+    transition: 1s ease;
+}
+
+@media (max-width: 992px) {
+
+	.code-image-css {
+	    margin-left: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+
+	.code-image-css {
+	    margin-left: 80%;
+    }
+}
+
+.left-column-text {
+    text-align: right;
+}
+
+.more-button {
+    padding-bottom: 1%;
+}
+
+.more-button-text {
+    width: 98%;
+    background-color: black;
+    transition: 2s ease;
+}
+
+.more-button:hover .more-button-text {
+  opacity: 0.5;
+}
+
+.project-display {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.project-images {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 1s ease;
+    backface-visibility: hidden;
+    padding-bottom: 10%;
+}
+
+.projects-text {
+    margin-bottom: 3%;
+    }
+
+.project-display-text {
+  background-color: #000000;
+  color: white;
+  font-size: 100%;
+}
+
+
+@media (max-width: 768px) {
+
+    .project-images-container {
+        width: 50%;
+
+    }
+}
+
+@media (max-width: 576px) {
+
+    .project-images-container {
+        width: 70%;
+        margin-left: 15%;
+
+    }
+}
+
+.project-images-container:hover .project-images {
+  opacity: 0.1;
+}
+
+.project-images-container:hover .project-display {
+  opacity: 1;
+}
+
+
+/************************** CONTACT SECTION **************************/
+#contact{
+    background-image: url("../img/3.png");
+    background-position: right bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding-top: 4%;
+    }
+
+.contact-form {
+    text-align: right;
+    transition: 1s ease;
+    }
+
+.contact-form-body {
+    padding-bottom: 3%;
+    padding-top: 2%;
+    }
+
+.copyright-text{
+    margin-top: 1%;
+    text-align: center;
+    }
+
+/************************** PROJECTS PAGE **************************/
+#projects-page {
+    background-color: #000000;
+    color: #fff;
+    padding-top: 4%
+    }
+
+.individual-containers {
+    padding-bottom: 0;
+    opacity: 1;
+    transition: 1s ease;
+    }
+
+.individual-containers:hover {
+  opacity: 0.1;
+}
+
+.projects-page-text {
+    text-align: right;
+    }
+
+.project-page-images {
+    height: 75%;
+    width: 100%;
+    }
+
+.project-page-button {
+    text-align: left;
+    margin-bottom: 4%;
+
+    }
+
+
+.left-column-buttons-small: {
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+
+    .project-page-title {
+        font-size: 120%;
+    }
+
+    .project-page-buttons {
+        font-size: 10%;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+
+    .project-page-button {
+        text-align: right;
+        margin-bottom: 5%;
+    }
+
+
+    .project-page-title {
+        font-size: 100%;
+    }
+
+    .vanishing-description {
+        margin-top: 5%;
+    }
+}
+
+
+.vanishing-description {
+    opacity: 0.1;
+    transition: 1.5s ease;
+}
+
+.vd-left {
+    text-align: right;
+}
+
+.vd-right {
+    text-align: left;
+}
+
+.vanishing-description:hover {
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+
+    .vanishing-description {
+        opacity: 0.8;;
+
+    }
+}
+
+/************************** INDIVIDUAL PROJECTS PAGE **************************/
+#individual-projects-page {
+    background-color: #000000;
+    color: #fff;
+    padding-top: 4%
+    }
+
+.individual-project-title {
+    text-align: right;
+    }
+
+.individual-project-description {
+    text-align: right;
+    }
+
+.individual-project-image {
+    width: 100%;
+    height: 100%;
+    }
+
+.individual-project-image:hover {
+    transition: opacity 1s, visibility 1s;
+    opacity: 0.1;
+}
+
+.individual-project-number {
+	    margin-top: 2%;
+    }
+
+@media (max-width: 576px) {
+
+	.individual-project-number {
+	    text-align: left;
+    }
+
+	.individual-project-title {
+	    text-align: left;
+    }
+
+	.individual-project-description {
+	    text-align: left;
+    }
+}
+
+
+.link-to-github {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 42%;
+    right: 0;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s, visibility 1s;
+    }
+
+
+.img-wrap:hover .link-to-github {
+    visibility: visible;
+    opacity: 1;
+    }
+
+/************************** ADD PROJECTS PAGE **************************/
+#add_project {
+    background-color: #000000;
+    color: #fff;
+    padding-top: 4%
+    }
+
+.add-form {
+    text-align: right;
+    }

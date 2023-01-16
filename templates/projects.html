@@ -1,0 +1,60 @@
+{% include "header.html" %}
+
+
+<body>
+
+    <section id="projects-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6"></div>
+                <div class="col-6">
+                    <h1>projects</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p class="projects-page-text">a collection of my work</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p class="projects-page-text">on the journey so far</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid project-images-container">
+            <div class="row">
+                {% for project in projects %}
+
+                <div class="col-lg-6 col-md-4 vanishing-description vd-right">
+                    <h3 class="project-page-title">{{project.project_number}}. {{ project.project_name }}</h3>
+                </div>
+
+                <div class="col-lg-3 col-md-4 individual-containers">
+                    <a href="{{ url_for('show_projects', project_num=project.project_number) }}">
+                        <img src="static/img/projects/project_{{project.project_number}}_img.png" class="project-page-images">
+                    </a>
+                </div>
+
+                <div class="project-page-buttons col-lg-3 col-md-4 col-sm-4 col-12">
+                    <div class="project-page-button col-12">
+                        <a class="project-page-button-element btn btn-outline-dark" href="{{ url_for('show_projects', project_num=project.project_number) }}" role="button">view project</a>
+                    </div>
+                    <div class="project-page-button col-sm-12 col-12">
+                        <a class="project-page-button-element btn btn-outline-dark" href="https://github.com/BigEd12/Project_{{ project.project_number }}" role="button">view on GitHub</a>
+                    </div>
+                </div>
+
+
+
+                {% endfor %}
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+
+{% include "footer.html" %}

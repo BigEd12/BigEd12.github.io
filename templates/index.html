@@ -1,0 +1,207 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+<body>
+
+    <section id="landing">
+        <div class="container-fluid title-container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-2"></div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-8">
+                    <img class="boxes-img" src="static/img/boxes.png" alt="overlaid_boxes">
+                </div>
+                <div class="col-lg-6 col-md-3 col-sm-3 col-2"></div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-6 col-6"></div>
+                <div class="landing-name col-lg-6 col-6">
+                    <h1>eduardo</h1>
+                    <h1>olmos</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="landing-text col-lg-6 col-6">
+                    <h3>front end</h3>
+                    <h3>back end</h3>
+                    <h3>web development</h3>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container-fluid">
+            <div class="middle_top">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6"></div>
+                    <div class="about-title col-6 col-sm-6 col-md-6 col-lg-6">
+                        <h1>about</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-0"></div>
+                    <div class="col-lg-6 col-sm-12" align="center">
+                        <img class="profile-image" src="static/img/eduardo_olmos.png" alt="Eduardo-Olmos">
+                    </div>
+                    <div class="col-lg-3 col-sm-0"></div>
+                </div>
+                <div class="about-text">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                          <h4 class="about-text-one">after 13 years as a teacher</h4>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6"></div>
+                        <div class="col-lg-6 col-md-6 col-12 col-sm-6">
+                          <h4 class="about-text-two">i made the move into front</h4>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12 col-sm-6">
+                          <h4 class="about-text-one">and back end web development</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6"></div>
+                    <div class="more-button col-lg-3 col-sm-12">
+                        <a class="more-button-text btn btn-dark btn-sm" href="{{ url_for ('about') }}" role="button">more</a>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="middle-bottom">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <h1 class="projects-text">projects</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <a href="{{ url_for ('projects') }}">
+                            <img class="code-images code-image-css" src="static/img/css.png">
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <img class="code-images" src="static/img/python.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="code-images" src="static/img/html.png">
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3"></div>
+                        <div class="col-xl-3 col-lg-3 col-sm-12">
+                            <p class="left-column-text">four projects taken at random from the collection</p>
+                        </div>
+                        <div class="more-button col-lg-3 col-sm-12">
+                            <a class="more-button-text btn btn-dark btn-sm" href="{{ url_for ('projects') }}" role="button">
+                                see all projects here
+                            </a>
+                            <div class="more-projects-button col-lg-3 col-sm-12">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3"></div>
+                    <div class="project-images-container project-images-left col-lg-3 col-md-3">
+                        <a href="{{ url_for('show_projects', project_num=random_1.project_number) }}">
+                            <img class="project-images" src="static/img/projects/project_{{ random_1.project_number }}_img.png">
+                        </a>
+                        <div class="project-display">
+                            <div class="project-display-text">{{ random_1.project_number }}. {{ random_1.project_name }}</div>
+                        </div>
+                    </div>
+                    <div class="project-images-container col-lg-3 col-md-3">
+                        <a href="{{ url_for('show_projects', project_num=random_2.project_number) }}">
+                            <img class="project-images" src="static/img/projects/project_{{ random_2.project_number }}_img.png">
+                        </a>
+                        <div class="project-display">
+                            <div class="project-display-text">{{ random_2.project_number }}. {{ random_2.project_name }}</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3"></div>
+                        <div class="project-images-container project-images-left col-lg-3 col-md-3">
+                            <a href="{{ url_for('show_projects', project_num=random_3.project_number) }}">
+                                <img class="project-images" src="static/img/projects/project_{{ random_3.project_number }}_img.png">
+                            </a>
+                            <div class="project-display">
+                                <div class="project-display-text">{{ random_3.project_number }}. {{ random_3.project_name }}</div>
+                            </div>
+                        </div>
+                        <div class="project-images-container col-lg-3 col-md-3">
+                            <a href="{{ url_for('show_projects', project_num=random_4.project_number) }}">
+                                <img class="project-images" src="static/img/projects/project_{{ random_4.project_number }}_img.png">
+                            </a>
+                            <div class="project-display">
+                                <div class="project-display-text">{{ random_4.project_number }}. {{ random_4.project_name }}</div>
+                            </div>
+                        </div>
+
+
+                    <div class="col-lg-3"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container-fluid">
+            <div class="lower">
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <h1>contact me</h1>
+                    </div>
+                </div>
+
+                <div class="contact-form-body row">
+                    <div class="col-lg-3 col-md-3 col-1"></div>
+                    <div class="contact-form col-lg-3 col-md-3 col-5">
+                        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "outline-light"}) }}
+                    </div>
+                    <div class="col-lg-6"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+<footer>
+    {% include "footer.html" %}
+</footer>
+
+
+
+
+</html>
