@@ -87,7 +87,7 @@ def home_page():
 
         return redirect(url_for("home_page"))
 
-    return render_template("index.html", form=form, year=year, random_1=random_1, random_2=random_2, random_3=random_3, random_4=random_4)
+    return render_template("index.html", form=form, year=year, random_1=random_1, random_2=random_2, random_3=random_3, random_4=random_4, num_projects=num_projects)
 
 
 @app.route('/about')
